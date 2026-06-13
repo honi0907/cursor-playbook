@@ -4,9 +4,10 @@
 
 ## 1. 汎用ルール（このリポジトリ）
 
-1. [INDEX.md](INDEX.md)
-2. [COMMON_APP_RULES.md](COMMON_APP_RULES.md)
-3. 必要なら [DEBUG_VISUAL_BOUNDARY.md](DEBUG_VISUAL_BOUNDARY.md) / [WINUI_SECOND_WINDOW.md](WINUI_SECOND_WINDOW.md)
+1. [PROJECT_WORKFLOW.md](PROJECT_WORKFLOW.md) … **新規アプリ・還流・更新の手順**
+2. [INDEX.md](INDEX.md)
+3. [COMMON_APP_RULES.md](COMMON_APP_RULES.md)
+4. 必要なら [DEBUG_VISUAL_BOUNDARY.md](DEBUG_VISUAL_BOUNDARY.md) / [WINUI_SECOND_WINDOW.md](WINUI_SECOND_WINDOW.md)
 
 ## 2. Cursor ルールの導入
 
@@ -27,7 +28,7 @@ git clone https://github.com/honi0907/cursor-playbook.git
 ## 4. 作業後
 
 - 対象アプリの build を実行
-- 汎用化できる学びがあれば **cursor-playbook** に還流、プロダクト固有は各リポジトリに残す
+- 汎用化できる学びがあれば **cursor-playbook** に還流、プロダクト固有は各リポジトリに残す（手順は [PROJECT_WORKFLOW.md](PROJECT_WORKFLOW.md)）
 
 ## 依頼文テンプレ
 

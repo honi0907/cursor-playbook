@@ -2,6 +2,7 @@
 
 ## 汎用（このリポジトリ）
 
+- [PROJECT_WORKFLOW.md](PROJECT_WORKFLOW.md) … **新規アプリ・導入・還流の運用フロー**
 - [CURSOR_START_HERE.md](CURSOR_START_HERE.md) … 最短入口
 - [COMMON_APP_RULES.md](COMMON_APP_RULES.md) … build / version / release
 - [AI_REQUEST_TEMPLATES.md](AI_REQUEST_TEMPLATES.md) … 依頼文テンプレ

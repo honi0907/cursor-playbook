@@ -1,0 +1,27 @@
+---
+description: （プロジェクト名）のアーキテクチャとこのリポジトリ固有のルール
+globs: "**/*"
+alwaysApply: false
+---
+
+# （プロジェクト名）
+
+## 概要
+
+- 技術スタック:
+- リポジトリ構成:
+
+## このプロジェクトだけのルール
+
+- 
+
+## 汎用ルールの参照
+
+- cursor-playbook: `playbook-*.mdc`（`Install-CursorRules.ps1` で導入）
+- 運用フロー: https://github.com/honi0907/cursor-playbook/blob/master/docs/PROJECT_WORKFLOW.md
+
+## 主要ファイル
+
+| やりたいこと | ファイル |
+|-------------|---------|
+| | |

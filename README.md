@@ -13,6 +13,8 @@ Cursor / AI 向けの**汎用ルールとドキュメント**の置き場。
 
 ## プロジェクトへの導入
 
+**手順の詳細は [docs/PROJECT_WORKFLOW.md](docs/PROJECT_WORKFLOW.md) を読むこと**（新規アプリ・還流・更新）。
+
 ```powershell
 # このリポジトリを clone 済みとして
 .\scripts\Install-CursorRules.ps1 -ProjectPath "C:\path\to\your-app"
@@ -28,9 +30,10 @@ Cursor / AI 向けの**汎用ルールとドキュメント**の置き場。
 
 ## 読む順番（人間・AI 共通）
 
-1. [docs/CURSOR_START_HERE.md](docs/CURSOR_START_HERE.md)
-2. [docs/COMMON_APP_RULES.md](docs/COMMON_APP_RULES.md)
-3. プロジェクト固有の `BUILD_RULES.md` / `.cursor/rules/kakipen-*.mdc` など
+1. [docs/PROJECT_WORKFLOW.md](docs/PROJECT_WORKFLOW.md) … **運用フロー（新規アプリ・還流）**
+2. [docs/CURSOR_START_HERE.md](docs/CURSOR_START_HERE.md)
+3. [docs/COMMON_APP_RULES.md](docs/COMMON_APP_RULES.md)
+4. プロジェクト固有の `BUILD_RULES.md` / `.cursor/rules/<プロジェクト名>-*.mdc`
 
 ## 由来
 
