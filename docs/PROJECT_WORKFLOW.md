@@ -113,13 +113,28 @@ Cursor 汎用は playbook の `docs/` を参照すればよい。
 
 ## C. playbook を更新したとき
 
-playbook リポジトリで `git pull` したあと、各プロジェクトで再実行:
+playbook リポジトリで `git pull` したあと:
+
+```powershell
+.\scripts\Install-UserCursorRules.ps1
+.\scripts\Sync-AllProjects.ps1
+```
+
+（`Install-PlaybookHook.ps1` 済みなら `git pull` だけで上記が自動実行される）
+
+各プロジェクトだけ更新する場合:
 
 ```powershell
 .\cursor-playbook\scripts\Install-CursorRules.ps1 -ProjectPath "C:\path\to\your-app"
 ```
 
 `playbook-*.mdc` のみ更新される。
+
+ペア（`.md` / `.mdc`）を変更したときは push 前に:
+
+```powershell
+.\scripts\verify-doc-pairs.ps1
+```
 
 ---
 

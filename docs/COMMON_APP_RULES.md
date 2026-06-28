@@ -40,6 +40,15 @@ KakiMoni 以外のアプリでも流用しやすい共通運用ルール。
 - build 成功だけで終わらず、release 反映後の asset 一覧まで確認する。
 - 運用ルールを変更したら、個別 `BUILD_RULES.md` と関連文書も同時に更新する。
 
-## Cursor 向け
+## Agent 向け要約
 
-上記の要約は `rules/generic/common-app-rules.mdc` として Agent にも適用できる（`Install-CursorRules.ps1` で導入）。
+- 変更作業は **完了報告前に対象アプリの build を実行**する
+- **起動中ならビルド前にプロセスを強制終了**する（`Stop-Process -Name <ExeName> -Force -ErrorAction SilentlyContinue` 等）
+- build 後は成果物名と出力先を確認する
+- **リリースビルドでは毎回ポータブル版（ZIP 等）も生成**する（インストーラーのみにしない）
+- version はリリースのたびに上げる。同じ tag の再利用はしない
+- パッチは **0〜9**。`X.Y.9` の次は **`X.(Y+1).0`**（例: `1.0.9` → `1.1.0`。`1.0.10` 不可）
+- 生成物フォルダに古い成果物を残さない
+- 運用ルール変更時は `BUILD_RULES.md` 等も同時更新
+
+導入: `Install-UserCursorRules.ps1` / `Install-CursorRules.ps1`

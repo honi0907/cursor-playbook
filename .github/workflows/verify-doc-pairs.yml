@@ -1,0 +1,16 @@
+name: verify-doc-pairs
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify md/mdc pairs
+        shell: pwsh
+        run: ./scripts/verify-doc-pairs.ps1

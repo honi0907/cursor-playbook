@@ -19,6 +19,12 @@ Cursor / AI 向けの**汎用ルールとドキュメント**の置き場。
 # このリポジトリを clone 済みとして
 .\scripts\Install-CursorRules.ps1 -ProjectPath "C:\path\to\your-app"
 
+# ユーザー全体（全プロジェクト・全チャット）に generic ルールを常時適用
+.\scripts\Install-UserCursorRules.ps1
+
+# pull 後の自動同期フック（初回のみ）
+.\scripts\Install-PlaybookHook.ps1
+
 # 層を指定（既定: generic + winui）
 .\scripts\Install-CursorRules.ps1 -ProjectPath "C:\path\to\your-app" -Layers generic
 .\scripts\Install-CursorRules.ps1 -ProjectPath "C:\path\to\your-app" -Layers winui

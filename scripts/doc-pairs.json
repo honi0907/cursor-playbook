@@ -1,0 +1,30 @@
+[
+  {
+    "name": "doc-pair-sync",
+    "markdown": "docs/DOC_PAIR_SYNC.md",
+    "rule": "rules/generic/doc-pair-sync.mdc",
+    "startHeading": "## 必須",
+    "endHeading": "## 役割分担"
+  },
+  {
+    "name": "common-app-rules",
+    "markdown": "docs/COMMON_APP_RULES.md",
+    "rule": "rules/generic/common-app-rules.mdc",
+    "startHeading": "## Agent 向け要約",
+    "endHeading": ""
+  },
+  {
+    "name": "debug-visual-boundary",
+    "markdown": "docs/DEBUG_VISUAL_BOUNDARY.md",
+    "rule": "rules/generic/debug-visual-boundary.mdc",
+    "startHeading": "## 手順（必須）",
+    "endHeading": "## WinUI の場合"
+  },
+  {
+    "name": "winui-second-window",
+    "markdown": "docs/WINUI_SECOND_WINDOW.md",
+    "rule": "rules/winui/winui-second-window-borderless.mdc",
+    "startHeading": "## フルスクリーン ON（確定）",
+    "endHeading": "## ロゴ / ミラー"
+  }
+]

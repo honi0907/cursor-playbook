@@ -1,0 +1,48 @@
+# ドキュメント .md / .mdc ペア同期
+
+<!-- pair: rules/generic/doc-pair-sync.mdc -->
+
+cursor-playbook および各アプリで、`docs/*.md`（正本）と `.cursor/rules/*.mdc`（Agent ミラー）をペアで管理する。
+
+## 必須
+
+- 手順・コマンド・定数・禁止事項・ファイル命名規則を変えたら、**ペア両方**を同じ作業で更新する
+- 片方だけ直して作業を終了しない
+- 新トピックでペアを作るときは `docs/doc-pairs.md` と `scripts/doc-pairs.json` にも追記する
+- ペアを変更したら `scripts/verify-doc-pairs.ps1` を実行し exit code 0 を確認する
+
+## ペアの見つけ方
+
+1. プロジェクトの `docs/doc-pairs.md`（最優先）
+2. `.mdc` frontmatter の `pairedWith`
+3. `.md` 先頭の `<!-- pair: ... -->` コメント
+
+## 新規プロジェクト
+
+運用手順・ビルド手順・リリース手順を書くときは次をセットで用意する:
+
+1. `docs/<topic>.md` — 正本（説明 + 手順 + 禁止事項）
+2. `.cursor/rules/<topic>.mdc` — Agent ミラー（手順・定数・禁止事項は `.md` と一致）
+3. `docs/doc-pairs.md` — ペア一覧
+
+## 役割分担
+
+| 層 | 役割 |
+|----|------|
+| `.md` | 人間・GitHub 向けの正本 |
+| `.mdc` | Agent 向けミラー（Cursor メタデータ可） |
+
+- `.md` にのみ書いてよい: 背景説明・関連リンク・設計の「なぜ」
+- `.mdc` にのみ書いてよい: `alwaysApply` / `globs` など Cursor 専用メタ
+- **事実の差分は不可**（コマンド、ファイル名規則、禁止事項など）
+
+## 検証
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\verify-doc-pairs.ps1
+```
+
+## 配布
+
+- ユーザー全体: `scripts/Install-UserCursorRules.ps1` → `~/.cursor/rules/playbook-*.mdc`
+- 各プロジェクト: `scripts/Install-CursorRules.ps1 -ProjectPath <path>`

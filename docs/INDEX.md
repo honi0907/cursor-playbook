@@ -5,6 +5,8 @@
 - [PROJECT_WORKFLOW.md](PROJECT_WORKFLOW.md) … **新規アプリ・導入・還流の運用フロー**
 - [CURSOR_START_HERE.md](CURSOR_START_HERE.md) … 最短入口
 - [COMMON_APP_RULES.md](COMMON_APP_RULES.md) … build / version / release
+- [DOC_PAIR_SYNC.md](DOC_PAIR_SYNC.md) … `.md` / `.mdc` ペア同期
+- [doc-pairs.md](doc-pairs.md) … playbook 内ペア一覧
 - [AI_REQUEST_TEMPLATES.md](AI_REQUEST_TEMPLATES.md) … 依頼文テンプレ
 - [DEBUG_VISUAL_BOUNDARY.md](DEBUG_VISUAL_BOUNDARY.md) … 縁・余白・枠の切り分け
 - [WINUI_SECOND_WINDOW.md](WINUI_SECOND_WINDOW.md) … WinUI 第2ウィンドウ・フルスクリーン

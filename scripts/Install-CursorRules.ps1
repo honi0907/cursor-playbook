@@ -3,7 +3,9 @@ param(
     [string]$ProjectPath,
 
     [ValidateSet("generic", "winui", "all")]
-    [string[]]$Layers = @("all")
+    [string[]]$Layers = @("all"),
+
+    [switch]$Verify
 )
 
 $ErrorActionPreference = "Stop"
@@ -52,3 +54,8 @@ $manifest | ConvertTo-Json -Depth 4 | Set-Content -Path $manifestPath -Encoding 
 Write-Host ""
 Write-Host "Done. $($installed.Count) rule(s) -> $TargetDir"
 Write-Host "Project-specific rules (e.g. kakipen-*.mdc) are not modified."
+
+if ($Verify) {
+    $verifyScript = Join-Path $PSScriptRoot "verify-doc-pairs.ps1"
+    & $verifyScript -ProjectRoot $PlaybookRoot
+}
