@@ -8,7 +8,7 @@ Cursor / AI 向けの**汎用ルールとドキュメント**の置き場。
 | 層 | 場所 | 用途 |
 |----|------|------|
 | 汎用 | `rules/generic/` | どのアプリでも（build 運用、UI 切り分け） |
-| WinUI | `rules/winui/` | WinUI 3 / 第2ウィンドウなど |
+| WinUI | `rules/winui/` | WinUI 3 / 第2ウィンドウ / UI スレッドなど |
 | 人間向け | `docs/` | VSCode / Cursor 両方で読む `.md` |
 
 ## プロジェクトへの導入
@@ -46,6 +46,7 @@ Cursor / AI 向けの**汎用ルールとドキュメント**の置き場。
 - `docs/COMMON_APP_RULES.md` など … [kakimoni-all](https://github.com/honi0907/kakimoni) の VSCode 時代の運用を汎用化
 - `rules/generic/debug-visual-boundary.mdc` … kakipen 外部出力白縁デバッグで確立した切り分け手順
 - `rules/winui/winui-second-window-borderless.mdc` … WinUI 第2ウィンドウ DWM 白枠対策
+- `rules/winui/winui-ui-threading.mdc` … WinUI `await` 後の UI 更新（オンライン更新クラッシュ等）
 
 ## ライセンス
 

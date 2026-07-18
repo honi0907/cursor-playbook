@@ -9,6 +9,7 @@
 | 共通 build / release | [`docs/COMMON_APP_RULES.md`](COMMON_APP_RULES.md) | [`rules/generic/common-app-rules.mdc`](../rules/generic/common-app-rules.mdc) |
 | 見た目バグ切り分け | [`docs/DEBUG_VISUAL_BOUNDARY.md`](DEBUG_VISUAL_BOUNDARY.md) | [`rules/generic/debug-visual-boundary.mdc`](../rules/generic/debug-visual-boundary.mdc) |
 | WinUI 第2ウィンドウ | [`docs/WINUI_SECOND_WINDOW.md`](WINUI_SECOND_WINDOW.md) | [`rules/winui/winui-second-window-borderless.mdc`](../rules/winui/winui-second-window-borderless.mdc) |
+| WinUI UI スレッド | [`docs/WINUI_UI_THREADING.md`](WINUI_UI_THREADING.md) | [`rules/winui/winui-ui-threading.mdc`](../rules/winui/winui-ui-threading.mdc) |
 
 ## 検証
 

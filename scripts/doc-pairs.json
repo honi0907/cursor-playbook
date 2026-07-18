@@ -26,5 +26,12 @@
     "rule": "rules/winui/winui-second-window-borderless.mdc",
     "startHeading": "## フルスクリーン ON（確定）",
     "endHeading": "## ロゴ / ミラー"
+  },
+  {
+    "name": "winui-ui-threading",
+    "markdown": "docs/WINUI_UI_THREADING.md",
+    "rule": "rules/winui/winui-ui-threading.mdc",
+    "startHeading": "## 必須（禁止）",
+    "endHeading": "## Cursor ルール"
   }
 ]

@@ -44,7 +44,17 @@
 - ここに書く
 ```
 
-## 4. リリース
+## 4. WinUI async / オンライン更新で落ちる
+
+```text
+まず WINUI_UI_THREADING.md を読んでください。
+await のあとに IsEnabled / Text / ContentDialog をそのまま触らないでください。DispatcherQueue 経由にしてください。
+
+症状:
+- ボタン押下後にアプリが無言終了する、など
+```
+
+## 5. リリース
 
 ```text
 まず COMMON_APP_RULES.md と対象 BUILD_RULES.md を読んでください。

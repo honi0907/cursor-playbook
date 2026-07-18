@@ -10,6 +10,7 @@
 - [AI_REQUEST_TEMPLATES.md](AI_REQUEST_TEMPLATES.md) … 依頼文テンプレ
 - [DEBUG_VISUAL_BOUNDARY.md](DEBUG_VISUAL_BOUNDARY.md) … 縁・余白・枠の切り分け
 - [WINUI_SECOND_WINDOW.md](WINUI_SECOND_WINDOW.md) … WinUI 第2ウィンドウ・フルスクリーン
+- [WINUI_UI_THREADING.md](WINUI_UI_THREADING.md) … WinUI `await` 後の UI 更新（WRONG_THREAD）
 
 ## Cursor ルール（Agent 自動適用）
 

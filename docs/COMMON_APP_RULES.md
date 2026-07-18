@@ -34,6 +34,7 @@ KakiMoni 以外のアプリでも流用しやすい共通運用ルール。
 
 - 自動更新を使う場合、manifest と配布 asset の参照関係を release 運用と一致させる。
 - package に update 用 metadata を含める場合は、どのファイルを同梱し、実体をどこから取得するかを文書化する。
+- **WinUI 3** で「更新確認」ボタン等を付けるときは [`WINUI_UI_THREADING.md`](WINUI_UI_THREADING.md) に従う（`await` 後に UI を直接触らない）。
 
 ## Verification
 

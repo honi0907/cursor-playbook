@@ -1,7 +1,6 @@
 $ErrorActionPreference = "Stop"
 
 $PlaybookRoot = Split-Path -Parent $PSScriptRoot
-$SourceDir = Join-Path $PlaybookRoot "rules\generic"
 $TargetDir = Join-Path $env:USERPROFILE ".cursor\rules"
 
 if (-not (Test-Path $TargetDir)) {
@@ -19,12 +18,25 @@ foreach ($name in $obsolete) {
     }
 }
 
-Get-ChildItem -Path $SourceDir -Filter "*.mdc" | ForEach-Object {
-    $destName = "playbook-$($_.Name)"
-    $destPath = Join-Path $TargetDir $destName
-    Copy-Item -Path $_.FullName -Destination $destPath -Force
-    $installed += $destName
-    Write-Host "Installed: $destName"
+# generic は alwaysApply、winui は globs で必要なときだけ効く
+$sourceDirs = @(
+    (Join-Path $PlaybookRoot "rules\generic"),
+    (Join-Path $PlaybookRoot "rules\winui")
+)
+
+foreach ($SourceDir in $sourceDirs) {
+    if (-not (Test-Path $SourceDir)) {
+        Write-Warning "Skip missing: $SourceDir"
+        continue
+    }
+
+    Get-ChildItem -Path $SourceDir -Filter "*.mdc" | ForEach-Object {
+        $destName = "playbook-$($_.Name)"
+        $destPath = Join-Path $TargetDir $destName
+        Copy-Item -Path $_.FullName -Destination $destPath -Force
+        $installed += $destName
+        Write-Host "Installed: $destName"
+    }
 }
 
 $manifest = @{
